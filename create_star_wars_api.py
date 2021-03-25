@@ -27,5 +27,7 @@ all_json_file = all_json_file.replace(" None", ' "None"')
 all_json_file = all_json_file.replace('Twi"lek', "Twi'lek")
 all_json_file = all_json_file.replace('Pau"an', "Pau'an")
 
+file_to_export = "{" + all_json_file[1::] + "}"
+
 with open("star_wars_db.json", "w+") as f:
-    f.write("{" + all_json_file[1::] + "}")
+    f.write(file_to_export)
